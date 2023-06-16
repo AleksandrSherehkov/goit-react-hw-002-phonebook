@@ -8,13 +8,13 @@ import { IconUser, ButtonTrash } from 'components/Contact/Contact.styled';
 export const Contact = ({ name, number, deleteContact, contactId }) => {
   return (
     <Box justifyContent="space-around" width="650px" bg="white" as="li">
-      <Box gridGap={4}>
+      <Box gridGap={4} justifyContent="flex-start" width="200px">
         <IconUser />
         <Text fontSize="m" fontWeight="bold" color="black">
           {name}
         </Text>
       </Box>
-      <Box gridGap={3}>
+      <Box gridGap={3} justifyContent="flex-start" width="200px">
         <FcCellPhone />
         <Text fontSize="m" fontWeight="bold" color="black">
           {number}

@@ -15,7 +15,7 @@ export class ContactForm extends Component {
   hendleSubmit = e => {
     const { createContact } = this.props;
     e.preventDefault();
-    createContact({ name: this.state.name, number: this.state.number });
+    createContact(this.state);
     this.reset();
   };
 

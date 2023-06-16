@@ -1,17 +1,29 @@
 import PropTypes from 'prop-types';
+import { FaTrash } from 'react-icons/fa';
+import { FcCellPhone } from 'react-icons/fc';
+import { Box } from 'utilities/styles/Box';
+import { Text } from 'utilities/styles/Text';
+import { IconUser, ButtonTrash } from 'components/Contact/Contact.styled';
 
 export const Contact = ({ name, number, deleteContact, contactId }) => {
   return (
-    <li>
-      <p>
-        <span>{name}</span>
-        <span>{number}</span>
-      </p>
-
-      <button type="button" onClick={() => deleteContact(contactId)}>
-        Delete
-      </button>
-    </li>
+    <Box justifyContent="space-around" width="650px" bg="white" as="li">
+      <Box gridGap={4}>
+        <IconUser />
+        <Text fontSize="m" fontWeight="bold" color="black">
+          {name}
+        </Text>
+      </Box>
+      <Box gridGap={3}>
+        <FcCellPhone />
+        <Text fontSize="m" fontWeight="bold" color="black">
+          {number}
+        </Text>
+      </Box>
+      <ButtonTrash as="button" type="button" onClick={() => deleteContact(contactId)}>
+        <FaTrash />
+      </ButtonTrash>
+    </Box>
   );
 };
 

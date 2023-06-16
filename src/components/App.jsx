@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+import { GlobalStyle } from 'utilities/styles/GlobalStyle';
 import { Section } from 'components/Section/Section';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { ContactForm } from 'components/ContactForm/ContactForm';
@@ -77,6 +78,7 @@ export class App extends Component {
             <Message text="Contact list is empty." />
           )}
         </Section>
+        <GlobalStyle />
       </>
     );
   }

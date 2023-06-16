@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
+import { Text } from 'utilities/styles/Text';
+
 export const Message = ({ text }) => {
-  return <p>{text}</p>;
+  return <Text>{text}</Text>;
 };
 
 Message.propTypes = {

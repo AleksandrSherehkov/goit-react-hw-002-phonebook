@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { Contact } from 'components/Contact/Contact';
-import React from 'react';
+import { Box } from 'utilities/styles/Box';
 
 export const ContactList = ({ contacts, deleteContact }) => {
   return (
-    <ul>
+    <Box mt={4} flexDirection="column" gridGap={4} as="ul">
       {contacts.map(({ id, name, number }) => {
         return (
           <Contact
@@ -16,7 +16,7 @@ export const ContactList = ({ contacts, deleteContact }) => {
           />
         );
       })}
-    </ul>
+    </Box>
   );
 };
 
